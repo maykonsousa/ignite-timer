@@ -15,6 +15,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors['gray-900']};
     color: ${({ theme }) => theme.colors['gray-300']};
+    -webkit-font-smoothing: antialiased;
     
   }
 
@@ -26,6 +27,11 @@ export const GlobalStyle = createGlobalStyle`
 
   button {
     cursor: pointer;
+    border: 0;
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
 
   }
 
